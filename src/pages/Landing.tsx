@@ -95,7 +95,7 @@ const Landing = () => {
           <h1 className="text-5xl md:text-7xl font-bold tracking-tight">
             Inteligência Artificial
             <br />
-            <span className="bg-gradient-to-r from-primary via-primary-hover to-success bg-clip-text text-transparent">
+            <span className="bg-gradient-to-r from-siplan-carmesim to-siplan-urucum bg-clip-text text-transparent">
               para Cartórios
             </span>
           </h1>

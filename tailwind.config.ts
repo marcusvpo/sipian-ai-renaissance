@@ -13,6 +13,10 @@ export default {
       },
     },
     extend: {
+      fontFamily: {
+        'merriweather': ['Merriweather', 'serif'],
+        'inter': ['Inter', 'sans-serif'],
+      },
       colors: {
         'siplan-bordo': '#5a0000',
         'siplan-borgonha': '#710101',

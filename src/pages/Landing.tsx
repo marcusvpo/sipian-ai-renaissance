@@ -126,7 +126,8 @@ const Landing = () => {
       </header>
 
       {/* SEÇÃO 1: HERO (Acima da Dobra) */}
-      <section className="container mx-auto px-4 py-24 md:py-40">
+      <section className="relative py-24 md:py-40 bg-gradient-to-br from-white via-siplan-carmesim/5 to-siplan-urucum/10">
+        <div className="container mx-auto px-4">
         <div className="max-w-6xl mx-auto text-center space-y-8">
           <h1 className="font-inter font-extrabold leading-[1.1]">
             <div className="text-5xl md:text-7xl text-siplan-carmesim mb-4">
@@ -167,10 +168,11 @@ const Landing = () => {
             </p>
           </div>
         </div>
+        </div>
       </section>
 
       {/* SEÇÃO 2: ANTES E DEPOIS (Transformação) */}
-      <section className="bg-[#F9F9F9] py-24 md:py-32">
+      <section className="relative py-24 md:py-32 bg-gradient-to-br from-siplan-bordo/5 via-white to-siplan-carmesim/5">
         <div className="container mx-auto px-4">
           <div className="max-w-5xl mx-auto">
             <h2 className="text-4xl md:text-5xl font-inter font-extrabold text-siplan-bordo text-center mb-6">
@@ -232,7 +234,7 @@ const Landing = () => {
       </section>
 
       {/* SEÇÃO: TUDO O QUE VOCÊ PRECISA */}
-      <section className="bg-white py-24 md:py-32">
+      <section className="relative py-24 md:py-32 bg-gradient-to-br from-white via-siplan-urucum/5 to-siplan-carmesim/10">
         <div className="container mx-auto px-4">
           <div className="max-w-6xl mx-auto">
             <div className="text-center mb-16">
@@ -385,7 +387,7 @@ const Landing = () => {
       </section>
 
       {/* SEÇÃO 3: PROVA SOCIAL (Confiança) */}
-      <section className="bg-white py-24 md:py-32">
+      <section className="relative py-24 md:py-32 bg-gradient-to-br from-siplan-carmesim/5 via-siplan-bordo/5 to-white">
         <div className="container mx-auto px-4">
           <div className="max-w-5xl mx-auto">
             <h2 className="text-4xl md:text-5xl font-inter font-extrabold text-siplan-bordo text-center mb-6">
@@ -448,7 +450,7 @@ const Landing = () => {
       </section>
 
       {/* SEÇÃO 4: DEMONSTRAÇÃO (AHA Moment) */}
-      <section id="recursos" className="bg-gradient-to-br from-siplan-bordo/5 to-siplan-carmesim/5 py-24 md:py-32">
+      <section id="recursos" className="relative py-24 md:py-32 bg-gradient-to-br from-siplan-urucum/10 via-siplan-carmesim/5 to-siplan-bordo/10">
         <div className="container mx-auto px-4">
           <div className="max-w-5xl mx-auto">
             <h2 className="text-4xl md:text-5xl font-inter font-extrabold text-siplan-bordo text-center mb-6">
@@ -512,7 +514,7 @@ const Landing = () => {
       </section>
 
       {/* SEÇÃO 5: PLANOS E PRECIFICAÇÃO */}
-      <section id="planos" className="bg-white py-24 md:py-32">
+      <section id="planos" className="relative py-24 md:py-32 bg-gradient-to-br from-white via-siplan-bordo/5 to-siplan-carmesim/5">
         <div className="container mx-auto px-4">
           <div className="max-w-6xl mx-auto">
             <h2 className="text-4xl md:text-5xl font-inter font-extrabold text-siplan-bordo text-center mb-6">
@@ -642,7 +644,7 @@ const Landing = () => {
       </section>
 
       {/* SEÇÃO 6: HUMANIZAÇÃO */}
-      <section className="bg-[#F9F9F9] py-24 md:py-32">
+      <section className="relative py-24 md:py-32 bg-gradient-to-br from-siplan-carmesim/10 via-siplan-urucum/5 to-white">
         <div className="container mx-auto px-4">
           <div className="max-w-6xl mx-auto">
             <div className="grid md:grid-cols-2 gap-12 items-center">
@@ -684,7 +686,7 @@ const Landing = () => {
       </section>
 
       {/* SEÇÃO 7: CAPTAÇÃO DE LEADS (Beta MVP) */}
-      <section id="beta" className="bg-white py-24 md:py-32">
+      <section id="beta" className="relative py-24 md:py-32 bg-gradient-to-br from-white via-siplan-bordo/5 to-siplan-carmesim/10">
         <div className="container mx-auto px-4">
           <div className="max-w-6xl mx-auto">
             <div className="grid md:grid-cols-2 gap-12 items-center">
@@ -784,7 +786,7 @@ const Landing = () => {
       </section>
 
       {/* SEÇÃO 8: RODAPÉ */}
-      <footer className="bg-siplan-bordo text-white py-24">
+      <footer className="relative py-24 bg-gradient-to-br from-siplan-bordo via-siplan-bordo/90 to-siplan-carmesim text-white">
         <div className="container mx-auto px-4">
           <div className="max-w-6xl mx-auto">
             {/* Selos de Confiança */}

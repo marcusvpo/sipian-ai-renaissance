@@ -1,10 +1,56 @@
-import { Link } from "react-router-dom";
+import { Link, useNavigate } from "react-router-dom";
+import { useState } from "react";
 import { Button } from "@/components/ui/button";
 import { Card, CardContent, CardDescription, CardHeader, CardTitle } from "@/components/ui/card";
 import { Badge } from "@/components/ui/badge";
-import { MessageSquare, FileSearch, Sparkles, Check, Zap, Shield, BarChart3 } from "lucide-react";
+import { MessageSquare, FileSearch, Sparkles, Check, Zap, Shield, BarChart3, Loader2 } from "lucide-react";
+import { useToast } from "@/components/ui/use-toast";
+import { supabase } from "@/integrations/supabase/client";
 
 const Landing = () => {
+  const [isLoadingDemo, setIsLoadingDemo] = useState(false);
+  const navigate = useNavigate();
+  const { toast } = useToast();
+
+  const handleDemoLogin = async () => {
+    setIsLoadingDemo(true);
+    
+    try {
+      // Criar conta demo via edge function
+      const { data, error } = await supabase.functions.invoke('create-demo-account');
+      
+      if (error) throw error;
+      
+      if (!data?.email || !data?.password) {
+        throw new Error('Credenciais demo não recebidas');
+      }
+
+      // Fazer login com a conta demo criada
+      const { error: signInError } = await supabase.auth.signInWithPassword({
+        email: data.email,
+        password: data.password,
+      });
+
+      if (signInError) throw signInError;
+
+      toast({
+        title: "Bem-vindo ao modo demo! 🎉",
+        description: "Explore todas as funcionalidades da plataforma",
+      });
+
+      navigate('/dashboard');
+    } catch (error: any) {
+      console.error('Demo login error:', error);
+      toast({
+        title: "Erro ao criar demo",
+        description: error.message || "Tente novamente",
+        variant: "destructive",
+      });
+    } finally {
+      setIsLoadingDemo(false);
+    }
+  };
+
   return (
     <div className="min-h-screen bg-background">
       {/* Header */}
@@ -62,8 +108,21 @@ const Landing = () => {
                 Começar Grátis
               </Button>
             </Link>
-            <Button size="lg" variant="outline" className="h-12 px-8 text-base">
-              Ver Demo
+            <Button 
+              size="lg" 
+              variant="outline" 
+              className="h-12 px-8 text-base"
+              onClick={handleDemoLogin}
+              disabled={isLoadingDemo}
+            >
+              {isLoadingDemo ? (
+                <>
+                  <Loader2 className="mr-2 h-4 w-4 animate-spin" />
+                  Criando demo...
+                </>
+              ) : (
+                "Ver Demo"
+              )}
             </Button>
           </div>
           <div className="flex items-center justify-center gap-8 pt-8 text-sm text-muted-foreground">

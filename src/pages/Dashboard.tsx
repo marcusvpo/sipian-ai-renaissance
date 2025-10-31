@@ -2,6 +2,7 @@ import { useEffect, useState } from "react";
 import { useNavigate, Link } from "react-router-dom";
 import { Button } from "@/components/ui/button";
 import { Card, CardContent, CardDescription, CardHeader, CardTitle } from "@/components/ui/card";
+import { Badge } from "@/components/ui/badge";
 import { supabase } from "@/integrations/supabase/client";
 import { useToast } from "@/components/ui/use-toast";
 import { 
@@ -19,6 +20,7 @@ import type { User as SupabaseUser } from "@supabase/supabase-js";
 const Dashboard = () => {
   const [user, setUser] = useState<SupabaseUser | null>(null);
   const [isLoading, setIsLoading] = useState(true);
+  const [isDemo, setIsDemo] = useState(false);
   const navigate = useNavigate();
   const { toast } = useToast();
 
@@ -32,6 +34,7 @@ const Dashboard = () => {
       }
       
       setUser(session.user);
+      setIsDemo(session.user?.user_metadata?.is_demo || false);
       setIsLoading(false);
     };
 
@@ -42,6 +45,7 @@ const Dashboard = () => {
         navigate("/auth");
       } else {
         setUser(session.user);
+        setIsDemo(session.user?.user_metadata?.is_demo || false);
       }
     });
 
@@ -94,6 +98,18 @@ const Dashboard = () => {
 
       {/* Main Content */}
       <main className="container mx-auto px-4 py-8">
+        {/* Demo Banner */}
+        {isDemo && (
+          <div className="mb-6 p-4 bg-warning/10 border border-warning/30 rounded-lg">
+            <div className="flex items-center gap-3">
+              <Badge className="bg-warning text-warning-foreground">MODO DEMO</Badge>
+              <p className="text-sm">
+                Você está explorando a plataforma em modo demonstração. Todas as funcionalidades estão disponíveis para teste.
+              </p>
+            </div>
+          </div>
+        )}
+
         {/* Welcome Section */}
         <div className="mb-8">
           <h1 className="text-3xl font-bold mb-2">

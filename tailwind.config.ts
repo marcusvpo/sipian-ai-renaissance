@@ -14,6 +14,12 @@ export default {
     },
     extend: {
       colors: {
+        'siplan-bordo': '#5a0000',
+        'siplan-borgonha': '#710101',
+        'siplan-carmesim': '#ad0505',
+        'siplan-urucum': '#d52d2d',
+        'siplan-cinza-medio': '#bbbbbb',
+        'siplan-cinza': '#999999',
         border: "hsl(var(--border))",
         input: "hsl(var(--input))",
         ring: "hsl(var(--ring))",

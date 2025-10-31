@@ -8,7 +8,7 @@ import { useToast } from "@/components/ui/use-toast";
 import { ArrowLeft, Wand2, Plus, Lock } from "lucide-react";
 import type { User } from "@supabase/supabase-js";
 
-const Gems = () => {
+const Nexus = () => {
   const [user, setUser] = useState<User | null>(null);
   const navigate = useNavigate();
   const { toast } = useToast();
@@ -76,13 +76,13 @@ const Gems = () => {
               </Button>
             </Link>
             <div>
-              <h1 className="font-semibold">Meus GEMS</h1>
-              <p className="text-xs text-muted-foreground">Assistentes de IA personalizados</p>
+              <h1 className="font-semibold">Meus NEXUS</h1>
+              <p className="text-xs text-muted-foreground">Assistentes de IA especializados que conectam inteligência e produtividade</p>
             </div>
           </div>
-          <Button className="bg-gradient-to-r from-primary to-primary-hover" disabled>
+          <Button className="bg-siplan-carmesim hover:bg-siplan-urucum text-white" disabled>
             <Plus className="w-4 h-4 mr-2" />
-            Criar GEM
+            Criar NEXUS
           </Button>
         </div>
       </header>
@@ -97,20 +97,20 @@ const Gems = () => {
                 <Wand2 className="w-5 h-5 text-primary" />
               </div>
               <div className="flex-1">
-                <h3 className="font-semibold mb-1">O que são GEMS?</h3>
+                <h3 className="font-semibold mb-1">O que são os NEXUS?</h3>
                 <p className="text-sm text-muted-foreground">
-                  GEMS são assistentes de IA especializados que você pode usar ou criar para tarefas específicas do seu cartório. 
-                  Use nossos GEMS pré-construídos ou crie os seus próprios com o Prompt Builder visual.
+                  Os NEXUS são assistentes de IA especializados (elos de inteligência) que você pode usar ou criar para tarefas específicas do seu cartório. 
+                  Use nossos NEXUS pré-construídos ou crie os seus próprios com o Prompt Builder visual.
                 </p>
               </div>
             </div>
           </CardContent>
         </Card>
 
-        {/* Pre-built GEMS */}
+        {/* Pre-built NEXUS */}
         <div className="mb-8">
           <div className="flex items-center justify-between mb-4">
-            <h2 className="text-2xl font-bold">GEMS Pré-Construídos</h2>
+            <h2 className="text-2xl font-bold">NEXUS Pré-Construídos</h2>
             <Badge variant="secondary">4 disponíveis</Badge>
           </div>
           
@@ -145,7 +145,7 @@ const Gems = () => {
                       size="sm" 
                       variant={gem.isPro ? "outline" : "default"}
                       disabled={gem.isPro}
-                      className={!gem.isPro ? "bg-gradient-to-r from-primary to-primary-hover" : ""}
+                      className={!gem.isPro ? "bg-siplan-carmesim hover:bg-siplan-urucum text-white" : ""}
                     >
                       {gem.isPro ? "Requer Pro" : "Usar Agora"}
                     </Button>
@@ -156,10 +156,10 @@ const Gems = () => {
           </div>
         </div>
 
-        {/* Custom GEMS Section */}
+        {/* Custom NEXUS Section */}
         <div>
           <div className="flex items-center justify-between mb-4">
-            <h2 className="text-2xl font-bold">Meus GEMS Customizados</h2>
+            <h2 className="text-2xl font-bold">Meus NEXUS Customizados</h2>
             <Badge variant="secondary">0 criados</Badge>
           </div>
 
@@ -168,20 +168,20 @@ const Gems = () => {
               <div className="w-16 h-16 rounded-2xl bg-muted flex items-center justify-center mx-auto mb-4">
                 <Wand2 className="w-8 h-8 text-muted-foreground" />
               </div>
-              <h3 className="text-xl font-semibold mb-2">Nenhum GEM customizado ainda</h3>
+              <h3 className="text-xl font-semibold mb-2">Nenhum NEXUS customizado ainda</h3>
               <p className="text-muted-foreground mb-6 max-w-md mx-auto">
                 Crie seu primeiro assistente personalizado com o Prompt Builder visual. 
                 Disponível no plano Pro.
               </p>
               <div className="flex items-center justify-center gap-3">
                 <Link to="/#pricing">
-                  <Button className="bg-gradient-to-r from-primary to-primary-hover">
+                  <Button className="bg-siplan-carmesim hover:bg-siplan-urucum text-white">
                     Upgrade para Pro
                   </Button>
                 </Link>
                 <Button variant="outline" disabled>
                   <Plus className="w-4 h-4 mr-2" />
-                  Criar GEM
+                  Criar NEXUS
                 </Button>
               </div>
             </CardContent>
@@ -192,4 +192,4 @@ const Gems = () => {
   );
 };
 
-export default Gems;
+export default Nexus;

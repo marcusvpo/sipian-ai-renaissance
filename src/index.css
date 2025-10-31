@@ -18,16 +18,16 @@ All colors MUST be HSL.
     --popover: 0 0% 100%;
     --popover-foreground: 222 47% 11%;
 
-    /* Primary: Deep Royal Blue - Trust & Authority */
-    --primary: 221 83% 53%;
+    /* Primary: Siplan Carmesim - Identidade Visual */
+    --primary: 0 94% 35%;
     --primary-foreground: 0 0% 100%;
-    --primary-hover: 221 83% 45%;
-    --primary-light: 221 83% 96%;
+    --primary-hover: 0 75% 51%;
+    --primary-light: 0 94% 96%;
 
-    /* Secondary: Slate - Professional Neutrality */
-    --secondary: 215 16% 47%;
+    /* Secondary: Siplan Bordo - Profissionalismo */
+    --secondary: 0 100% 18%;
     --secondary-foreground: 0 0% 100%;
-    --secondary-hover: 215 16% 37%;
+    --secondary-hover: 0 99% 22%;
 
     /* Success: Emerald Green - Achievement */
     --success: 142 76% 36%;
@@ -68,21 +68,21 @@ All colors MUST be HSL.
     --transition-base: all 0.2s cubic-bezier(0.4, 0, 0.2, 1);
     --transition-smooth: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
 
-    --sidebar-background: 0 0% 98%;
+    --sidebar-background: 0 100% 18%;
 
-    --sidebar-foreground: 240 5.3% 26.1%;
+    --sidebar-foreground: 0 0% 73%;
 
-    --sidebar-primary: 240 5.9% 10%;
+    --sidebar-primary: 0 94% 35%;
 
-    --sidebar-primary-foreground: 0 0% 98%;
+    --sidebar-primary-foreground: 0 0% 100%;
 
-    --sidebar-accent: 240 4.8% 95.9%;
+    --sidebar-accent: 0 100% 22%;
 
-    --sidebar-accent-foreground: 240 5.9% 10%;
+    --sidebar-accent-foreground: 0 0% 100%;
 
-    --sidebar-border: 220 13% 91%;
+    --sidebar-border: 0 100% 22%;
 
-    --sidebar-ring: 217.2 91.2% 59.8%;
+    --sidebar-ring: 0 94% 35%;
   }
 
   .dark {
@@ -95,14 +95,14 @@ All colors MUST be HSL.
     --popover: 222 47% 15%;
     --popover-foreground: 0 0% 98%;
 
-    --primary: 221 83% 53%;
+    --primary: 0 94% 35%;
     --primary-foreground: 0 0% 100%;
-    --primary-hover: 221 83% 60%;
-    --primary-light: 221 83% 20%;
+    --primary-hover: 0 75% 51%;
+    --primary-light: 0 94% 20%;
 
-    --secondary: 215 16% 47%;
+    --secondary: 0 100% 18%;
     --secondary-foreground: 0 0% 100%;
-    --secondary-hover: 215 16% 55%;
+    --secondary-hover: 0 99% 22%;
 
     --success: 142 76% 36%;
     --success-foreground: 0 0% 100%;
@@ -130,14 +130,14 @@ All colors MUST be HSL.
     --shadow-md: 0 4px 6px -1px hsl(0 0% 0% / 0.4), 0 2px 4px -1px hsl(0 0% 0% / 0.3);
     --shadow-lg: 0 10px 15px -3px hsl(0 0% 0% / 0.4), 0 4px 6px -2px hsl(0 0% 0% / 0.3);
     --shadow-xl: 0 20px 25px -5px hsl(0 0% 0% / 0.4), 0 10px 10px -5px hsl(0 0% 0% / 0.3);
-    --sidebar-background: 240 5.9% 10%;
-    --sidebar-foreground: 240 4.8% 95.9%;
-    --sidebar-primary: 224.3 76.3% 48%;
+    --sidebar-background: 0 100% 18%;
+    --sidebar-foreground: 0 0% 73%;
+    --sidebar-primary: 0 94% 35%;
     --sidebar-primary-foreground: 0 0% 100%;
-    --sidebar-accent: 240 3.7% 15.9%;
-    --sidebar-accent-foreground: 240 4.8% 95.9%;
-    --sidebar-border: 240 3.7% 15.9%;
-    --sidebar-ring: 217.2 91.2% 59.8%;
+    --sidebar-accent: 0 100% 22%;
+    --sidebar-accent-foreground: 0 0% 100%;
+    --sidebar-border: 0 100% 22%;
+    --sidebar-ring: 0 94% 35%;
   }
 }
 

@@ -77,7 +77,7 @@ const Landing = () => {
               </Button>
             </Link>
             <Link to="/auth">
-              <Button size="sm" className="bg-gradient-to-r from-primary to-primary-hover hover:opacity-90">
+              <Button size="sm" className="bg-siplan-carmesim hover:bg-siplan-urucum text-white">
                 Começar Grátis
               </Button>
             </Link>
@@ -104,7 +104,7 @@ const Landing = () => {
           </p>
           <div className="flex flex-col sm:flex-row items-center justify-center gap-4 pt-4">
             <Link to="/auth">
-              <Button size="lg" className="bg-gradient-to-r from-primary to-primary-hover hover:opacity-90 h-12 px-8 text-base">
+              <Button size="lg" className="bg-siplan-carmesim hover:bg-siplan-urucum text-white h-12 px-8 text-base">
                 Começar Grátis
               </Button>
             </Link>
@@ -215,7 +215,7 @@ const Landing = () => {
                 <div className="w-12 h-12 rounded-lg bg-warning/10 flex items-center justify-center mb-4">
                   <Sparkles className="w-6 h-6 text-warning" />
                 </div>
-                <CardTitle>GEMS Personalizados</CardTitle>
+                <CardTitle>NEXUS Personalizados</CardTitle>
                 <CardDescription>
                   Crie assistentes de IA customizados para sua rotina específica
                 </CardDescription>
@@ -320,7 +320,7 @@ const Landing = () => {
                   </li>
                   <li className="flex items-center gap-2 text-muted-foreground">
                     <span className="w-5 h-5" />
-                    <span>GEMS customizados</span>
+                    <span>NEXUS customizados</span>
                   </li>
                 </ul>
                 <Link to="/auth" className="block">
@@ -365,7 +365,7 @@ const Landing = () => {
                   </li>
                   <li className="flex items-center gap-2">
                     <Check className="w-5 h-5 text-success" />
-                    <span className="font-medium">GEMS customizados</span>
+                    <span className="font-medium">NEXUS customizados</span>
                   </li>
                   <li className="flex items-center gap-2">
                     <Check className="w-5 h-5 text-success" />
@@ -373,7 +373,7 @@ const Landing = () => {
                   </li>
                 </ul>
                 <Link to="/auth" className="block">
-                  <Button className="w-full bg-gradient-to-r from-primary to-primary-hover">
+                  <Button className="w-full bg-siplan-carmesim hover:bg-siplan-urucum text-white">
                     Comece Agora
                   </Button>
                 </Link>
@@ -438,7 +438,7 @@ const Landing = () => {
           </p>
           <div className="flex flex-col sm:flex-row items-center justify-center gap-4 pt-4">
             <Link to="/auth">
-              <Button size="lg" className="bg-gradient-to-r from-primary to-primary-hover hover:opacity-90 h-12 px-8">
+              <Button size="lg" className="bg-siplan-carmesim hover:bg-siplan-urucum text-white h-12 px-8">
                 Começar Gratuitamente
               </Button>
             </Link>
@@ -447,46 +447,46 @@ const Landing = () => {
       </section>
 
       {/* Footer */}
-      <footer className="border-t border-border">
+      <footer className="border-t border-border bg-siplan-borgonha">
         <div className="container mx-auto px-4 py-12">
           <div className="grid md:grid-cols-4 gap-8">
             <div>
               <div className="flex items-center gap-2 mb-4">
-                <div className="w-8 h-8 rounded-lg bg-gradient-to-br from-primary to-primary-hover flex items-center justify-center">
-                  <Sparkles className="w-5 h-5 text-primary-foreground" />
+                <div className="w-8 h-8 rounded-lg bg-siplan-carmesim flex items-center justify-center">
+                  <Sparkles className="w-5 h-5 text-white" />
                 </div>
-                <span className="text-xl font-bold">SIPLAN IA</span>
+                <span className="text-xl font-bold text-white">SIPLAN IA</span>
               </div>
-              <p className="text-sm text-muted-foreground">
+              <p className="text-sm text-siplan-cinza-medio">
                 42 anos de expertise cartorial transformados em inteligência artificial.
               </p>
             </div>
             <div>
-              <h3 className="font-semibold mb-4">Produto</h3>
-              <ul className="space-y-2 text-sm text-muted-foreground">
-                <li><a href="#features" className="hover:text-foreground transition-colors">Recursos</a></li>
-                <li><a href="#pricing" className="hover:text-foreground transition-colors">Planos</a></li>
-                <li><a href="#" className="hover:text-foreground transition-colors">Documentação</a></li>
+              <h3 className="font-semibold mb-4 text-white">Produto</h3>
+              <ul className="space-y-2 text-sm text-siplan-cinza-medio">
+                <li><a href="#features" className="hover:text-white transition-colors">Recursos</a></li>
+                <li><a href="#pricing" className="hover:text-white transition-colors">Planos</a></li>
+                <li><a href="#" className="hover:text-white transition-colors">Documentação</a></li>
               </ul>
             </div>
             <div>
-              <h3 className="font-semibold mb-4">Empresa</h3>
-              <ul className="space-y-2 text-sm text-muted-foreground">
-                <li><a href="#" className="hover:text-foreground transition-colors">Sobre</a></li>
-                <li><a href="#" className="hover:text-foreground transition-colors">Blog</a></li>
-                <li><a href="#" className="hover:text-foreground transition-colors">Contato</a></li>
+              <h3 className="font-semibold mb-4 text-white">Empresa</h3>
+              <ul className="space-y-2 text-sm text-siplan-cinza-medio">
+                <li><a href="#" className="hover:text-white transition-colors">Sobre</a></li>
+                <li><a href="#" className="hover:text-white transition-colors">Blog</a></li>
+                <li><a href="#" className="hover:text-white transition-colors">Contato</a></li>
               </ul>
             </div>
             <div>
-              <h3 className="font-semibold mb-4">Legal</h3>
-              <ul className="space-y-2 text-sm text-muted-foreground">
-                <li><a href="#" className="hover:text-foreground transition-colors">Privacidade</a></li>
-                <li><a href="#" className="hover:text-foreground transition-colors">Termos</a></li>
-                <li><a href="#" className="hover:text-foreground transition-colors">LGPD</a></li>
+              <h3 className="font-semibold mb-4 text-white">Legal</h3>
+              <ul className="space-y-2 text-sm text-siplan-cinza-medio">
+                <li><a href="#" className="hover:text-white transition-colors">Privacidade</a></li>
+                <li><a href="#" className="hover:text-white transition-colors">Termos</a></li>
+                <li><a href="#" className="hover:text-white transition-colors">LGPD</a></li>
               </ul>
             </div>
           </div>
-          <div className="border-t border-border mt-8 pt-8 text-center text-sm text-muted-foreground">
+          <div className="border-t border-siplan-bordo mt-8 pt-8 text-center text-sm text-siplan-cinza-medio">
             © 2025 SIPLAN IA. Todos os direitos reservados.
           </div>
         </div>

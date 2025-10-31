@@ -218,7 +218,7 @@ const Chat = () => {
             <Button
               onClick={handleSend}
               disabled={!input.trim() || isLoading}
-              className="bg-gradient-to-r from-primary to-primary-hover"
+              className="bg-siplan-carmesim hover:bg-siplan-urucum text-white"
             >
               {isLoading ? (
                 <Loader2 className="w-4 h-4 animate-spin" />

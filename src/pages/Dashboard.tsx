@@ -155,7 +155,7 @@ const Dashboard = () => {
           <Card>
             <CardHeader className="flex flex-row items-center justify-between pb-2">
               <CardTitle className="text-sm font-medium text-muted-foreground">
-                GEMS Ativos
+                NEXUS Ativos
               </CardTitle>
               <Wand2 className="w-4 h-4 text-muted-foreground" />
             </CardHeader>
@@ -219,18 +219,18 @@ const Dashboard = () => {
             </Card>
           </Link>
 
-          <Link to="/gems">
+          <Link to="/nexus">
             <Card className="hover:shadow-lg transition-all cursor-pointer group">
               <CardHeader>
                 <div className="w-12 h-12 rounded-lg bg-warning/10 flex items-center justify-center mb-4 group-hover:scale-110 transition-transform">
                   <Wand2 className="w-6 h-6 text-warning" />
                 </div>
                 <CardTitle className="flex items-center justify-between">
-                  Meus GEMS
+                  Meus NEXUS
                   <ChevronRight className="w-5 h-5 text-muted-foreground group-hover:translate-x-1 transition-transform" />
                 </CardTitle>
                 <CardDescription>
-                  Crie e gerencie assistentes de IA personalizados
+                  Crie e gerencie seus assistentes de IA (NEXUS)
                 </CardDescription>
               </CardHeader>
             </Card>
@@ -250,7 +250,7 @@ const Dashboard = () => {
           </CardHeader>
           <CardContent>
             <Link to="/#pricing">
-              <Button className="bg-gradient-to-r from-primary to-primary-hover">
+              <Button className="bg-siplan-carmesim hover:bg-siplan-urucum text-white">
                 Ver Planos
               </Button>
             </Link>

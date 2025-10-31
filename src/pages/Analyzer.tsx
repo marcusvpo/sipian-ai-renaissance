@@ -189,7 +189,7 @@ const Analyzer = () => {
                     <Button
                       onClick={handleAnalyze}
                       disabled={isAnalyzing}
-                      className="bg-gradient-to-r from-primary to-primary-hover"
+                      className="bg-siplan-carmesim hover:bg-siplan-urucum text-white"
                     >
                       {isAnalyzing ? (
                         <>
@@ -232,7 +232,7 @@ const Analyzer = () => {
                   <Button variant="outline" className="flex-1">
                     Exportar Relatório
                   </Button>
-                  <Button className="flex-1 bg-gradient-to-r from-primary to-primary-hover">
+                  <Button className="flex-1 bg-siplan-carmesim hover:bg-siplan-urucum text-white">
                     Nova Análise
                   </Button>
                 </div>
@@ -251,7 +251,7 @@ const Analyzer = () => {
                     Você tem 5 análises gratuitas por mês. Upgrade para Pro e tenha 100 análises mensais com IA GPT-5 Premium e sugestões automáticas de exigências.
                   </p>
                   <Link to="/#pricing">
-                    <Button variant="link" className="px-0 h-auto mt-2 text-primary">
+                    <Button variant="link" className="px-0 h-auto mt-2 text-siplan-carmesim hover:text-siplan-urucum">
                       Ver planos →
                     </Button>
                   </Link>

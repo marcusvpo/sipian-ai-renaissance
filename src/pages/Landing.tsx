@@ -84,7 +84,7 @@ const Landing = () => {
   };
 
   return (
-    <div className="min-h-screen bg-background font-lato">
+    <div className="min-h-screen bg-background font-inter">
       {/* Header */}
       <header className="border-b border-border bg-background/95 backdrop-blur supports-[backdrop-filter]:bg-background/60 sticky top-0 z-50">
         <div className="container mx-auto px-4 py-4 flex items-center justify-between">
@@ -92,7 +92,7 @@ const Landing = () => {
             <div className="w-10 h-10 rounded-lg bg-gradient-to-br from-siplan-carmesim to-siplan-urucum flex items-center justify-center">
               <Sparkles className="w-6 h-6 text-white" />
             </div>
-            <span className="text-2xl font-bold font-playfair text-siplan-bordo">
+            <span className="text-2xl font-bold font-inter font-extrabold text-siplan-bordo">
               SIPLAN IA
             </span>
           </div>
@@ -110,14 +110,14 @@ const Landing = () => {
               Ver Demonstração
             </a>
             <Link to="/auth">
-              <Button variant="ghost" size="sm" className="font-medium">
-                Entrar
-              </Button>
+            <Button variant="ghost" size="sm" className="font-inter font-medium">
+              Entrar
+            </Button>
             </Link>
             <Link to="/auth">
-              <Button size="sm" className="bg-siplan-carmesim hover:bg-siplan-urucum text-white font-semibold transition-all duration-300 hover:shadow-lg">
-                Começar Grátis
-              </Button>
+            <Button size="sm" className="bg-siplan-carmesim hover:bg-siplan-urucum text-white font-inter font-medium transition-all duration-300 hover:shadow-lg">
+              Começar Grátis
+            </Button>
             </Link>
           </nav>
         </div>
@@ -127,7 +127,7 @@ const Landing = () => {
       <section className="container mx-auto px-4 py-24 md:py-40">
         <div className="grid md:grid-cols-2 gap-12 items-center max-w-6xl mx-auto">
           <div className="space-y-8">
-            <h1 className="text-6xl md:text-7xl font-bold font-playfair text-siplan-bordo leading-[1.1]">
+            <h1 className="text-6xl md:text-7xl font-inter font-extrabold text-siplan-bordo leading-[1.1]">
               A inteligência artificial que devolve tempo e tranquilidade ao seu Cartório.
             </h1>
             <p className="text-xl text-siplan-cinza leading-[1.6] max-w-[720px]">
@@ -135,12 +135,12 @@ const Landing = () => {
             </p>
             <div className="space-y-4">
               <Link to="/auth">
-                <Button size="lg" className="bg-siplan-urucum hover:bg-[#b92424] text-white h-14 px-8 text-lg w-full md:w-auto font-semibold transition-all duration-300 hover:shadow-lg hover:scale-[1.02] group">
+                <Button size="lg" className="bg-siplan-urucum hover:bg-[#b92424] text-white h-14 px-8 text-lg w-full md:w-auto font-inter font-medium transition-all duration-300 hover:shadow-lg hover:scale-[1.02] group">
                   <ArrowRight className="w-5 h-5 mr-2 group-hover:translate-x-1 transition-transform" />
                   Quero testar gratuitamente
                 </Button>
               </Link>
-              <div className="flex flex-wrap items-center gap-4 text-sm text-siplan-cinza font-medium">
+              <div className="flex flex-wrap items-center gap-4 text-sm text-siplan-cinza font-inter font-medium">
                 <div className="flex items-center gap-2">
                   <Check className="w-4 h-4 text-success" />
                   <span>1 análise gratuita</span>
@@ -156,7 +156,7 @@ const Landing = () => {
               </div>
             </div>
             <div className="pt-4 border-t border-border">
-              <p className="text-sm text-siplan-cinza-medio italic font-medium">
+              <p className="text-sm text-siplan-cinza-medio italic font-inter font-medium">
                 Desenvolvido por especialistas em Direito Notarial e IA.
               </p>
             </div>
@@ -167,7 +167,7 @@ const Landing = () => {
                 <div className="flex items-center gap-3 pb-4 border-b">
                   <FileSearch className="w-8 h-8 text-siplan-carmesim" />
                   <div>
-                    <h3 className="font-semibold text-siplan-bordo font-playfair">Análise em Tempo Real</h3>
+                    <h3 className="font-semibold text-siplan-bordo font-inter font-extrabold">Análise em Tempo Real</h3>
                     <p className="text-sm text-siplan-cinza">Documento sendo processado...</p>
                   </div>
                 </div>
@@ -196,7 +196,7 @@ const Landing = () => {
       <section className="bg-[#F9F9F9] py-24 md:py-32">
         <div className="container mx-auto px-4">
           <div className="max-w-5xl mx-auto">
-            <h2 className="text-4xl md:text-5xl font-bold font-playfair text-siplan-bordo text-center mb-6">
+            <h2 className="text-4xl md:text-5xl font-inter font-extrabold text-siplan-bordo text-center mb-6">
               📑 Sua rotina cartorial antes e depois do SIPLAN IA
             </h2>
             <p className="text-center text-siplan-cinza mb-16 max-w-[720px] mx-auto leading-[1.6]">
@@ -209,7 +209,7 @@ const Landing = () => {
                 <CardHeader className="bg-destructive/5">
                   <div className="flex items-center gap-2 mb-2">
                     <XCircle className="w-6 h-6 text-destructive" />
-                    <CardTitle className="text-2xl font-playfair text-destructive">Antes</CardTitle>
+                    <CardTitle className="text-2xl font-inter font-extrabold text-destructive">Antes</CardTitle>
                   </div>
                 </CardHeader>
                 <CardContent className="pt-6 space-y-4">
@@ -232,7 +232,7 @@ const Landing = () => {
                 <CardHeader className="bg-success/5">
                   <div className="flex items-center gap-2 mb-2">
                     <CheckCircle className="w-6 h-6 text-success" />
-                    <CardTitle className="text-2xl font-playfair text-success">Depois</CardTitle>
+                    <CardTitle className="text-2xl font-inter font-extrabold text-success">Depois</CardTitle>
                   </div>
                 </CardHeader>
                 <CardContent className="pt-6 space-y-4">
@@ -258,7 +258,7 @@ const Landing = () => {
       <section className="bg-white py-24 md:py-32">
         <div className="container mx-auto px-4">
           <div className="max-w-5xl mx-auto">
-            <h2 className="text-4xl md:text-5xl font-bold font-playfair text-siplan-bordo text-center mb-6">
+            <h2 className="text-4xl md:text-5xl font-inter font-extrabold text-siplan-bordo text-center mb-6">
               💬 Cartórios que já estão simplificando o trabalho com IA
             </h2>
             
@@ -274,10 +274,10 @@ const Landing = () => {
                     </p>
                     <div className="flex items-center gap-3">
                       <div className="w-12 h-12 rounded-full bg-siplan-carmesim/10 flex items-center justify-center">
-                        <span className="font-bold text-siplan-carmesim font-playfair">CA</span>
+                        <span className="font-bold text-siplan-carmesim font-inter font-extrabold">CA</span>
                       </div>
                       <div>
-                        <p className="font-semibold text-siplan-bordo font-playfair">Dr. Carlos Almeida</p>
+                        <p className="font-semibold text-siplan-bordo font-inter font-extrabold">Dr. Carlos Almeida</p>
                         <p className="text-sm text-siplan-cinza">2º Ofício de Notas – MG</p>
                       </div>
                     </div>
@@ -296,10 +296,10 @@ const Landing = () => {
                     </p>
                     <div className="flex items-center gap-3">
                       <div className="w-12 h-12 rounded-full bg-siplan-carmesim/10 flex items-center justify-center">
-                        <span className="font-bold text-siplan-carmesim font-playfair">LF</span>
+                        <span className="font-bold text-siplan-carmesim font-inter font-extrabold">LF</span>
                       </div>
                       <div>
-                        <p className="font-semibold text-siplan-bordo font-playfair">Dra. Luciana Figueiredo</p>
+                        <p className="font-semibold text-siplan-bordo font-inter font-extrabold">Dra. Luciana Figueiredo</p>
                         <p className="text-sm text-siplan-cinza">Tabeliã – SP</p>
                       </div>
                     </div>
@@ -321,7 +321,7 @@ const Landing = () => {
       <section id="recursos" className="bg-gradient-to-br from-siplan-bordo/5 to-siplan-carmesim/5 py-24 md:py-32">
         <div className="container mx-auto px-4">
           <div className="max-w-5xl mx-auto">
-            <h2 className="text-4xl md:text-5xl font-bold font-playfair text-siplan-bordo text-center mb-6">
+            <h2 className="text-4xl md:text-5xl font-inter font-extrabold text-siplan-bordo text-center mb-6">
               ⚙️ Veja o SIPLAN IA em ação — sem precisar entender de IA
             </h2>
             <p className="text-xl text-siplan-cinza text-center mb-16 max-w-[720px] mx-auto leading-[1.6]">
@@ -334,21 +334,21 @@ const Landing = () => {
                   <div className="w-16 h-16 mx-auto rounded-full bg-siplan-carmesim/10 flex items-center justify-center">
                     <FileText className="w-8 h-8 text-siplan-carmesim" />
                   </div>
-                  <h3 className="font-bold text-siplan-bordo font-playfair">1. Upload</h3>
+                  <h3 className="font-bold text-siplan-bordo font-inter font-extrabold">1. Upload</h3>
                   <p className="text-sm text-siplan-cinza leading-[1.6]">Arraste seu documento PDF ou JPG</p>
                 </div>
                 <div className="text-center space-y-3">
                   <div className="w-16 h-16 mx-auto rounded-full bg-siplan-carmesim/10 flex items-center justify-center">
                     <Sparkles className="w-8 h-8 text-siplan-carmesim" />
                   </div>
-                  <h3 className="font-bold text-siplan-bordo font-playfair">2. Análise IA</h3>
+                  <h3 className="font-bold text-siplan-bordo font-inter font-extrabold">2. Análise IA</h3>
                   <p className="text-sm text-siplan-cinza leading-[1.6]">A IA processa e identifica pontos críticos</p>
                 </div>
                 <div className="text-center space-y-3">
                   <div className="w-16 h-16 mx-auto rounded-full bg-siplan-carmesim/10 flex items-center justify-center">
                     <BarChart3 className="w-8 h-8 text-siplan-carmesim" />
                   </div>
-                  <h3 className="font-bold text-siplan-bordo font-playfair">3. Relatório</h3>
+                  <h3 className="font-bold text-siplan-bordo font-inter font-extrabold">3. Relatório</h3>
                   <p className="text-sm text-siplan-cinza leading-[1.6]">Receba análise estruturada e acionável</p>
                 </div>
               </div>
@@ -357,7 +357,7 @@ const Landing = () => {
             <div className="text-center space-y-4">
               <Button 
                 size="lg" 
-                className="bg-siplan-carmesim hover:bg-[#8d0404] text-white h-14 px-8 font-semibold transition-all duration-300 hover:shadow-lg hover:scale-[1.02] group"
+                className="bg-siplan-carmesim hover:bg-[#8d0404] text-white h-14 px-8 font-inter font-medium transition-all duration-300 hover:shadow-lg hover:scale-[1.02] group"
                 onClick={handleDemoLogin}
                 disabled={isLoadingDemo}
               >
@@ -385,7 +385,7 @@ const Landing = () => {
       <section id="planos" className="bg-white py-24 md:py-32">
         <div className="container mx-auto px-4">
           <div className="max-w-6xl mx-auto">
-            <h2 className="text-4xl md:text-5xl font-bold font-playfair text-siplan-bordo text-center mb-6">
+            <h2 className="text-4xl md:text-5xl font-inter font-extrabold text-siplan-bordo text-center mb-6">
               💼 Escolha o plano que combina com o ritmo do seu Cartório
             </h2>
             <p className="text-xl text-siplan-cinza text-center mb-16 leading-[1.6]">
@@ -396,9 +396,9 @@ const Landing = () => {
               {/* Free */}
               <Card className="border-2 rounded-xl shadow-md">
                 <CardHeader>
-                  <CardTitle className="font-playfair">Free</CardTitle>
+                  <CardTitle className="font-inter font-extrabold">Free</CardTitle>
                   <div className="mt-4">
-                    <span className="text-5xl font-bold text-siplan-bordo font-playfair">R$ 0</span>
+                    <span className="text-5xl font-bold text-siplan-bordo font-inter font-extrabold">R$ 0</span>
                     <span className="text-siplan-cinza">/mês</span>
                   </div>
                   <CardDescription className="mt-2">Ideal para testes iniciais</CardDescription>
@@ -423,7 +423,7 @@ const Landing = () => {
                     </li>
                   </ul>
                   <Link to="/auth" className="block">
-                    <Button variant="outline" className="w-full font-semibold">
+                    <Button variant="outline" className="w-full font-inter font-medium">
                       Experimente Grátis
                     </Button>
                   </Link>
@@ -433,14 +433,14 @@ const Landing = () => {
               {/* Pro - Destaque */}
               <Card className="border-4 border-siplan-carmesim shadow-2xl relative scale-105 rounded-xl">
                 <div className="absolute -top-4 left-1/2 -translate-x-1/2">
-                  <Badge className="bg-siplan-carmesim hover:bg-siplan-urucum text-white px-6 py-2 text-base font-semibold">
+                  <Badge className="bg-siplan-carmesim hover:bg-siplan-urucum text-white px-6 py-2 text-base font-inter font-medium">
                     ⭐ Mais Usado
                   </Badge>
                 </div>
                 <CardHeader>
-                  <CardTitle className="font-playfair">Pro</CardTitle>
+                  <CardTitle className="font-inter font-extrabold">Pro</CardTitle>
                   <div className="mt-4">
-                    <span className="text-5xl font-bold text-siplan-carmesim font-playfair">R$ 199</span>
+                    <span className="text-5xl font-bold text-siplan-carmesim font-inter font-extrabold">R$ 199</span>
                     <span className="text-siplan-cinza">/mês</span>
                   </div>
                   <CardDescription className="mt-2">Ideal para cartórios de médio porte</CardDescription>
@@ -465,7 +465,7 @@ const Landing = () => {
                     </li>
                   </ul>
                   <Link to="/auth" className="block">
-                    <Button className="w-full bg-siplan-carmesim hover:bg-[#8d0404] text-white h-12 font-semibold transition-all duration-300 hover:shadow-lg">
+                    <Button className="w-full bg-siplan-carmesim hover:bg-[#8d0404] text-white h-12 font-inter font-medium transition-all duration-300 hover:shadow-lg">
                       Comece Agora
                     </Button>
                   </Link>
@@ -475,9 +475,9 @@ const Landing = () => {
               {/* Enterprise */}
               <Card className="border-2 rounded-xl shadow-md">
                 <CardHeader>
-                  <CardTitle className="font-playfair">Enterprise</CardTitle>
+                  <CardTitle className="font-inter font-extrabold">Enterprise</CardTitle>
                   <div className="mt-4">
-                    <span className="text-5xl font-bold text-siplan-bordo font-playfair">R$ 799</span>
+                    <span className="text-5xl font-bold text-siplan-bordo font-inter font-extrabold">R$ 799</span>
                     <span className="text-siplan-cinza">+/mês</span>
                   </div>
                   <CardDescription className="mt-2">Ideal para grandes serventias</CardDescription>
@@ -501,7 +501,7 @@ const Landing = () => {
                       <span className="font-medium leading-[1.6]">Treinamento personalizado</span>
                     </li>
                   </ul>
-                  <Button variant="outline" className="w-full font-semibold">
+                  <Button variant="outline" className="w-full font-inter font-medium">
                     💬 Fale com um especialista
                   </Button>
                 </CardContent>
@@ -517,14 +517,14 @@ const Landing = () => {
           <div className="max-w-6xl mx-auto">
             <div className="grid md:grid-cols-2 gap-12 items-center">
               <div className="order-2 md:order-1">
-                <h2 className="text-4xl md:text-5xl font-bold font-playfair text-siplan-bordo mb-8">
+                <h2 className="text-4xl md:text-5xl font-inter font-extrabold text-siplan-bordo mb-8">
                   👥 Por trás da tecnologia, pessoas que entendem o valor da confiança
                 </h2>
                 <p className="text-lg text-siplan-cinza leading-[1.6] mb-8 max-w-[720px]">
                   O SIPLAN IA nasceu da união entre especialistas em Direito Notarial e Registral e engenheiros de Inteligência Artificial. Nossa missão é preservar a tradição e a credibilidade do trabalho cartorial — automatizando o que é repetitivo e valorizando o que é essencialmente humano: a confiança.
                 </p>
                 <blockquote className="border-l-4 border-siplan-carmesim pl-6 py-4 bg-white rounded-r-xl shadow-md">
-                  <p className="text-2xl font-playfair text-siplan-bordo italic">
+                  <p className="text-2xl font-inter font-extrabold text-siplan-bordo italic">
                     "A tecnologia muda. A confiança, não."
                   </p>
                 </blockquote>
@@ -559,7 +559,7 @@ const Landing = () => {
           <div className="max-w-6xl mx-auto">
             <div className="grid md:grid-cols-2 gap-12 items-center">
               <div>
-                <h2 className="text-4xl md:text-5xl font-bold font-playfair text-siplan-bordo mb-6">
+                <h2 className="text-4xl md:text-5xl font-inter font-extrabold text-siplan-bordo mb-6">
                   🚀 Faça parte da primeira geração de Cartórios Inteligentes do Brasil
                 </h2>
                 <p className="text-lg text-siplan-cinza mb-8 leading-[1.6] max-w-[720px]">
@@ -615,20 +615,20 @@ const Landing = () => {
                   <Button 
                     type="submit"
                     size="lg"
-                    className="w-full bg-siplan-urucum hover:bg-[#b92424] text-white h-14 text-lg font-semibold transition-all duration-300 hover:shadow-lg hover:scale-[1.02]"
+                    className="w-full bg-siplan-urucum hover:bg-[#b92424] text-white h-14 text-lg font-inter font-medium transition-all duration-300 hover:shadow-lg hover:scale-[1.02]"
                   >
                     🧩 Quero participar do Beta gratuito
                   </Button>
                 </form>
 
-                <p className="text-sm text-siplan-cinza text-center mt-4 italic font-medium leading-[1.6]">
+                <p className="text-sm text-siplan-cinza text-center mt-4 italic font-inter font-medium leading-[1.6]">
                   Ajude a moldar o futuro dos Cartórios com tecnologia feita para humanos, com humanos.
                 </p>
               </div>
 
               <div className="bg-gradient-to-br from-siplan-bordo/5 to-siplan-carmesim/5 rounded-2xl p-8 border-2 border-siplan-cinza-medio/20">
                 <div className="bg-white rounded-xl p-6 shadow-lg">
-                  <h3 className="text-2xl font-bold font-playfair text-siplan-bordo mb-6">
+                  <h3 className="text-2xl font-bold font-inter font-extrabold text-siplan-bordo mb-6">
                     Benefícios exclusivos do Beta
                   </h3>
                   <ul className="space-y-4">
@@ -681,7 +681,7 @@ const Landing = () => {
                   <div className="w-10 h-10 rounded-lg bg-siplan-carmesim flex items-center justify-center">
                     <Sparkles className="w-6 h-6 text-white" />
                   </div>
-                  <span className="text-xl font-bold font-playfair">SIPLAN IA</span>
+                  <span className="text-xl font-bold font-inter font-extrabold">SIPLAN IA</span>
                 </div>
                 <p className="text-sm text-siplan-cinza-medio leading-[1.6]">
                   Hub de Inteligência Artificial para Cartórios

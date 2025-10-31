@@ -14,7 +14,8 @@ export default {
     },
     extend: {
       fontFamily: {
-        'merriweather': ['Merriweather', 'serif'],
+        'playfair': ['Playfair Display', 'serif'],
+        'lato': ['Lato', 'sans-serif'],
         'inter': ['Inter', 'sans-serif'],
       },
       colors: {

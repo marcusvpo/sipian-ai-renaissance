@@ -106,8 +106,10 @@ const Landing = () => {
             <a href="#beta" className="text-sm font-medium text-muted-foreground hover:text-siplan-carmesim transition-colors">
               Beta
             </a>
-            <a href="#recursos" className="text-sm font-semibold text-siplan-carmesim hover:text-siplan-urucum transition-colors border border-siplan-carmesim px-4 py-2 rounded-lg hover:bg-siplan-carmesim/5">
-              Ver Demonstração
+            <a href="#recursos">
+              <Button variant="outline" size="sm" className="font-inter font-medium border-siplan-carmesim text-siplan-carmesim hover:bg-siplan-carmesim hover:text-white transition-all">
+                Ver Demo
+              </Button>
             </a>
             <Link to="/auth">
             <Button variant="ghost" size="sm" className="font-inter font-medium">
@@ -125,69 +127,44 @@ const Landing = () => {
 
       {/* SEÇÃO 1: HERO (Acima da Dobra) */}
       <section className="container mx-auto px-4 py-24 md:py-40">
-        <div className="grid md:grid-cols-2 gap-12 items-center max-w-6xl mx-auto">
-          <div className="space-y-8">
-            <h1 className="text-6xl md:text-7xl font-inter font-extrabold text-siplan-bordo leading-[1.1]">
-              A inteligência artificial que devolve tempo e tranquilidade ao seu Cartório.
-            </h1>
-            <p className="text-xl text-siplan-cinza leading-[1.6] max-w-[720px]">
-              O SIPLAN IA automatiza análises documentais e atendimentos com segurança e precisão — reduzindo até 75% do tempo operacional, sem abrir mão da confiabilidade que seu cartório exige.
-            </p>
-            <div className="space-y-4">
-              <Link to="/auth">
-                <Button size="lg" className="bg-siplan-urucum hover:bg-[#b92424] text-white h-14 px-8 text-lg w-full md:w-auto font-inter font-medium transition-all duration-300 hover:shadow-lg hover:scale-[1.02] group">
-                  <ArrowRight className="w-5 h-5 mr-2 group-hover:translate-x-1 transition-transform" />
-                  Quero testar gratuitamente
-                </Button>
-              </Link>
-              <div className="flex flex-wrap items-center gap-4 text-sm text-siplan-cinza font-inter font-medium">
-                <div className="flex items-center gap-2">
-                  <Check className="w-4 h-4 text-success" />
-                  <span>1 análise gratuita</span>
-                </div>
-                <div className="flex items-center gap-2">
-                  <Check className="w-4 h-4 text-success" />
-                  <span>Sem cartão de crédito</span>
-                </div>
-                <div className="flex items-center gap-2">
-                  <Check className="w-4 h-4 text-success" />
-                  <span>Cancele quando quiser</span>
-                </div>
-              </div>
+        <div className="max-w-6xl mx-auto text-center space-y-8">
+          <h1 className="font-inter font-extrabold leading-[1.1]">
+            <div className="text-5xl md:text-7xl text-siplan-carmesim mb-4">
+              A inteligência artificial
             </div>
-            <div className="pt-4 border-t border-border">
-              <p className="text-sm text-siplan-cinza-medio italic font-inter font-medium">
-                Desenvolvido por especialistas em Direito Notarial e IA.
-              </p>
+            <div className="text-4xl md:text-6xl text-siplan-bordo">
+              que devolve tempo e tranquilidade ao seu Cartório.
+            </div>
+          </h1>
+          <p className="text-xl text-siplan-cinza leading-[1.6] max-w-[720px] mx-auto">
+            O SIPLAN IA automatiza análises documentais e atendimentos com segurança e precisão — reduzindo até 75% do tempo operacional, sem abrir mão da confiabilidade que seu cartório exige.
+          </p>
+          <div className="flex flex-col items-center gap-4">
+            <Link to="/auth">
+              <Button size="lg" className="bg-siplan-urucum hover:bg-[#b92424] text-white h-14 px-8 text-lg font-inter font-medium transition-all duration-300 hover:shadow-lg hover:scale-[1.02] group">
+                <ArrowRight className="w-5 h-5 mr-2 group-hover:translate-x-1 transition-transform" />
+                Quero testar gratuitamente
+              </Button>
+            </Link>
+            <div className="flex flex-wrap items-center justify-center gap-4 text-sm text-siplan-cinza font-inter font-medium">
+              <div className="flex items-center gap-2">
+                <Check className="w-4 h-4 text-success" />
+                <span>1 análise gratuita</span>
+              </div>
+              <div className="flex items-center gap-2">
+                <Check className="w-4 h-4 text-success" />
+                <span>Sem cartão de crédito</span>
+              </div>
+              <div className="flex items-center gap-2">
+                <Check className="w-4 h-4 text-success" />
+                <span>Cancele quando quiser</span>
+              </div>
             </div>
           </div>
-          <div className="relative">
-            <div className="bg-gradient-to-br from-siplan-cinza-medio/10 to-siplan-carmesim/10 rounded-2xl p-8 border-2 border-siplan-cinza-medio/20">
-              <div className="bg-white rounded-xl shadow-2xl p-6 space-y-4">
-                <div className="flex items-center gap-3 pb-4 border-b">
-                  <FileSearch className="w-8 h-8 text-siplan-carmesim" />
-                  <div>
-                    <h3 className="font-semibold text-siplan-bordo font-inter font-extrabold">Análise em Tempo Real</h3>
-                    <p className="text-sm text-siplan-cinza">Documento sendo processado...</p>
-                  </div>
-                </div>
-                <div className="space-y-2">
-                  {[
-                    { label: "Identificação de Partes", status: "ok" },
-                    { label: "Verificação de Cláusulas", status: "ok" },
-                    { label: "Análise de Riscos", status: "checking" },
-                    { label: "Sugestões Automáticas", status: "pending" }
-                  ].map((item, i) => (
-                    <div key={i} className="flex items-center justify-between p-3 bg-gray-50 rounded-lg">
-                      <span className="text-sm">{item.label}</span>
-                      {item.status === "ok" && <CheckCircle className="w-5 h-5 text-success" />}
-                      {item.status === "checking" && <Loader2 className="w-5 h-5 text-siplan-carmesim animate-spin" />}
-                      {item.status === "pending" && <div className="w-5 h-5 rounded-full border-2 border-siplan-cinza-medio" />}
-                    </div>
-                  ))}
-                </div>
-              </div>
-            </div>
+          <div className="pt-4 border-t border-border max-w-md mx-auto">
+            <p className="text-sm text-siplan-cinza-medio italic font-inter font-medium">
+              Desenvolvido por especialistas em Direito Notarial e IA.
+            </p>
           </div>
         </div>
       </section>
@@ -247,6 +224,159 @@ const Landing = () => {
                       <span className="text-siplan-cinza font-medium leading-[1.6]">{item}</span>
                     </div>
                   ))}
+                </CardContent>
+              </Card>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      {/* SEÇÃO: TUDO O QUE VOCÊ PRECISA */}
+      <section className="bg-white py-24 md:py-32">
+        <div className="container mx-auto px-4">
+          <div className="max-w-6xl mx-auto">
+            <div className="text-center mb-16">
+              <Badge variant="secondary" className="mb-4 bg-siplan-bordo text-white px-4 py-2">
+                Recursos
+              </Badge>
+              <h2 className="text-4xl md:text-5xl font-inter font-extrabold text-siplan-bordo mb-4">
+                Tudo o que você precisa
+              </h2>
+              <p className="text-xl text-siplan-cinza max-w-[720px] mx-auto leading-[1.6]">
+                Uma plataforma completa para revolucionar sua rotina cartorial
+              </p>
+            </div>
+
+            <div className="grid md:grid-cols-3 gap-6">
+              {/* Chatbot Especialista */}
+              <Card className="border-2 rounded-xl hover:shadow-lg transition-all duration-300">
+                <CardContent className="pt-6">
+                  <div className="w-14 h-14 rounded-lg bg-red-50 flex items-center justify-center mb-4">
+                    <MessageSquare className="w-7 h-7 text-destructive" />
+                  </div>
+                  <h3 className="text-xl font-inter font-extrabold text-siplan-bordo mb-2">
+                    Chatbot Especialista
+                  </h3>
+                  <p className="text-sm text-siplan-cinza mb-4 leading-[1.6]">
+                    "ChatGPT dos Cartórios" treinado 100% em legislação cartorial brasileira
+                  </p>
+                  <ul className="space-y-2">
+                    <li className="flex items-start gap-2 text-sm text-siplan-cinza">
+                      <Check className="w-4 h-4 text-success mt-0.5 flex-shrink-0" />
+                      <span>Respostas instantâneas sobre qualquer aspecto cartorial</span>
+                    </li>
+                    <li className="flex items-start gap-2 text-sm text-siplan-cinza">
+                      <Check className="w-4 h-4 text-success mt-0.5 flex-shrink-0" />
+                      <span>Pesquisa de Provimentos CNJ e jurisprudência</span>
+                    </li>
+                    <li className="flex items-start gap-2 text-sm text-siplan-cinza">
+                      <Check className="w-4 h-4 text-success mt-0.5 flex-shrink-0" />
+                      <span>Citação de fontes legais em cada resposta</span>
+                    </li>
+                  </ul>
+                </CardContent>
+              </Card>
+
+              {/* Analisador de Documentos */}
+              <Card className="border-2 border-success/40 rounded-xl hover:shadow-xl transition-all duration-300 relative">
+                <CardContent className="pt-6">
+                  <div className="w-14 h-14 rounded-lg bg-green-50 flex items-center justify-center mb-4">
+                    <FileSearch className="w-7 h-7 text-success" />
+                  </div>
+                  <h3 className="text-xl font-inter font-extrabold text-siplan-bordo mb-2">
+                    Analisador de Documentos
+                  </h3>
+                  <p className="text-sm text-siplan-cinza mb-4 leading-[1.6]">
+                    Upload de PDFs/JPGs com OCR inteligente e análise estruturada
+                  </p>
+                  <ul className="space-y-2">
+                    <li className="flex items-start gap-2 text-sm text-siplan-cinza">
+                      <Check className="w-4 h-4 text-success mt-0.5 flex-shrink-0" />
+                      <span>Análise de matrículas, títulos, minutas e certidões</span>
+                    </li>
+                    <li className="flex items-start gap-2 text-sm text-siplan-cinza">
+                      <Check className="w-4 h-4 text-success mt-0.5 flex-shrink-0" />
+                      <span>Relatório estruturado com semáforo visual</span>
+                    </li>
+                    <li className="flex items-start gap-2 text-sm text-siplan-cinza">
+                      <Check className="w-4 h-4 text-success mt-0.5 flex-shrink-0" />
+                      <span>Identificação automática de pendências</span>
+                    </li>
+                  </ul>
+                </CardContent>
+              </Card>
+
+              {/* NEXUS Personalizados */}
+              <Card className="border-2 border-siplan-urucum/40 rounded-xl hover:shadow-lg transition-all duration-300">
+                <CardContent className="pt-6">
+                  <div className="w-14 h-14 rounded-lg bg-orange-50 flex items-center justify-center mb-4">
+                    <Sparkles className="w-7 h-7 text-siplan-urucum" />
+                  </div>
+                  <h3 className="text-xl font-inter font-extrabold text-siplan-bordo mb-2">
+                    NEXUS Personalizados
+                  </h3>
+                  <p className="text-sm text-siplan-cinza mb-4 leading-[1.6]">
+                    Crie assistentes de IA customizados para sua rotina específica
+                  </p>
+                  <ul className="space-y-2">
+                    <li className="flex items-start gap-2 text-sm text-siplan-cinza">
+                      <Check className="w-4 h-4 text-success mt-0.5 flex-shrink-0" />
+                      <span>Qualificador Registral, Mentor Júnior e mais</span>
+                    </li>
+                    <li className="flex items-start gap-2 text-sm text-siplan-cinza">
+                      <Check className="w-4 h-4 text-success mt-0.5 flex-shrink-0" />
+                      <span>Prompt Builder visual para customização</span>
+                    </li>
+                    <li className="flex items-start gap-2 text-sm text-siplan-cinza">
+                      <Check className="w-4 h-4 text-success mt-0.5 flex-shrink-0" />
+                      <span>Reutilize em diferentes contextos</span>
+                    </li>
+                  </ul>
+                </CardContent>
+              </Card>
+
+              {/* Segurança Total */}
+              <Card className="border-2 rounded-xl hover:shadow-lg transition-all duration-300">
+                <CardContent className="pt-6">
+                  <div className="w-14 h-14 rounded-lg bg-red-50 flex items-center justify-center mb-4">
+                    <Shield className="w-7 h-7 text-destructive" />
+                  </div>
+                  <h3 className="text-xl font-inter font-extrabold text-siplan-bordo mb-2">
+                    Segurança Total
+                  </h3>
+                  <p className="text-sm text-siplan-cinza leading-[1.6]">
+                    Seus dados protegidos com criptografia de ponta e conformidade LGPD
+                  </p>
+                </CardContent>
+              </Card>
+
+              {/* Analytics Inteligente */}
+              <Card className="border-2 rounded-xl hover:shadow-lg transition-all duration-300">
+                <CardContent className="pt-6">
+                  <div className="w-14 h-14 rounded-lg bg-green-50 flex items-center justify-center mb-4">
+                    <BarChart3 className="w-7 h-7 text-success" />
+                  </div>
+                  <h3 className="text-xl font-inter font-extrabold text-siplan-bordo mb-2">
+                    Analytics Inteligente
+                  </h3>
+                  <p className="text-sm text-siplan-cinza leading-[1.6]">
+                    Acompanhe métricas e otimize sua produtividade com insights em tempo real
+                  </p>
+                </CardContent>
+              </Card>
+
+              {/* Atualizações Contínuas */}
+              <Card className="border-2 rounded-xl hover:shadow-lg transition-all duration-300">
+                <CardContent className="pt-6">
+                  <div className="w-14 h-14 rounded-lg bg-orange-50 flex items-center justify-center mb-4">
+                    <Zap className="w-7 h-7 text-siplan-urucum" />
+                  </div>
+                  <h3 className="text-xl font-inter font-extrabold text-siplan-bordo mb-2">
+                    Atualizações Contínuas
+                  </h3>
+                  <p className="text-sm text-siplan-cinza leading-[1.6]">
+                    Base de conhecimento atualizada com novas leis e provimentos automaticamente
+                  </p>
                 </CardContent>
               </Card>
             </div>

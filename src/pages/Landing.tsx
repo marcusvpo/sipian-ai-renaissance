@@ -8,7 +8,6 @@ import { Label } from "@/components/ui/label";
 import { Select, SelectContent, SelectItem, SelectTrigger, SelectValue } from "@/components/ui/select";
 import { Textarea } from "@/components/ui/textarea";
 import { 
-  MessageSquare, 
   FileSearch, 
   Sparkles, 
   Check, 
@@ -217,7 +216,7 @@ const Landing = () => {
                 <CardContent className="pt-6 space-y-4">
                   {[
                     "Análises automáticas e relatórios em segundos",
-                    "Chatbot jurídico disponível 24h",
+                    "Nexus personalizados para sua rotina específica",
                     "Revisão automatizada com precisão",
                     "Mais tempo para o atendimento humano"
                   ].map((item, i) => (
@@ -249,37 +248,8 @@ const Landing = () => {
               </p>
             </div>
 
-            <div className="grid md:grid-cols-3 gap-6">
-              {/* Chatbot Especialista */}
-              <Card className="border-2 rounded-xl hover:shadow-lg transition-all duration-300">
-                <CardContent className="pt-6">
-                  <div className="w-14 h-14 rounded-lg bg-red-50 flex items-center justify-center mb-4">
-                    <MessageSquare className="w-7 h-7 text-destructive" />
-                  </div>
-                  <h3 className="text-xl font-inter font-extrabold text-siplan-bordo mb-2">
-                    Chatbot Especialista
-                  </h3>
-                  <p className="text-sm text-siplan-cinza mb-4 leading-[1.6]">
-                    "ChatGPT dos Cartórios" treinado 100% em legislação cartorial brasileira
-                  </p>
-                  <ul className="space-y-2">
-                    <li className="flex items-start gap-2 text-sm text-siplan-cinza">
-                      <Check className="w-4 h-4 text-success mt-0.5 flex-shrink-0" />
-                      <span>Respostas instantâneas sobre qualquer aspecto cartorial</span>
-                    </li>
-                    <li className="flex items-start gap-2 text-sm text-siplan-cinza">
-                      <Check className="w-4 h-4 text-success mt-0.5 flex-shrink-0" />
-                      <span>Pesquisa de Provimentos CNJ e jurisprudência</span>
-                    </li>
-                    <li className="flex items-start gap-2 text-sm text-siplan-cinza">
-                      <Check className="w-4 h-4 text-success mt-0.5 flex-shrink-0" />
-                      <span>Citação de fontes legais em cada resposta</span>
-                    </li>
-                  </ul>
-                </CardContent>
-              </Card>
-
-              {/* Analisador de Documentos */}
+            <div className="grid md:grid-cols-2 gap-8">
+              {/* Analisador de Documentos - DESTAQUE */}
               <Card className="border-2 border-success/40 rounded-xl hover:shadow-xl transition-all duration-300 relative">
                 <CardContent className="pt-6">
                   <div className="w-14 h-14 rounded-lg bg-green-50 flex items-center justify-center mb-4">
@@ -308,8 +278,11 @@ const Landing = () => {
                 </CardContent>
               </Card>
 
-              {/* NEXUS Personalizados */}
-              <Card className="border-2 border-siplan-urucum/40 rounded-xl hover:shadow-lg transition-all duration-300">
+              {/* NEXUS Personalizados - DESTAQUE */}
+              <Card className="border-2 border-siplan-urucum/40 rounded-xl hover:shadow-xl transition-all duration-300 relative">
+                <div className="absolute top-4 right-4 bg-siplan-urucum text-white text-xs font-inter font-medium px-3 py-1 rounded-full">
+                  EM BREVE
+                </div>
                 <CardContent className="pt-6">
                   <div className="w-14 h-14 rounded-lg bg-orange-50 flex items-center justify-center mb-4">
                     <Sparkles className="w-7 h-7 text-siplan-urucum" />
@@ -334,51 +307,6 @@ const Landing = () => {
                       <span>Reutilize em diferentes contextos</span>
                     </li>
                   </ul>
-                </CardContent>
-              </Card>
-
-              {/* Segurança Total */}
-              <Card className="border-2 rounded-xl hover:shadow-lg transition-all duration-300">
-                <CardContent className="pt-6">
-                  <div className="w-14 h-14 rounded-lg bg-red-50 flex items-center justify-center mb-4">
-                    <Shield className="w-7 h-7 text-destructive" />
-                  </div>
-                  <h3 className="text-xl font-inter font-extrabold text-siplan-bordo mb-2">
-                    Segurança Total
-                  </h3>
-                  <p className="text-sm text-siplan-cinza leading-[1.6]">
-                    Seus dados protegidos com criptografia de ponta e conformidade LGPD
-                  </p>
-                </CardContent>
-              </Card>
-
-              {/* Analytics Inteligente */}
-              <Card className="border-2 rounded-xl hover:shadow-lg transition-all duration-300">
-                <CardContent className="pt-6">
-                  <div className="w-14 h-14 rounded-lg bg-green-50 flex items-center justify-center mb-4">
-                    <BarChart3 className="w-7 h-7 text-success" />
-                  </div>
-                  <h3 className="text-xl font-inter font-extrabold text-siplan-bordo mb-2">
-                    Analytics Inteligente
-                  </h3>
-                  <p className="text-sm text-siplan-cinza leading-[1.6]">
-                    Acompanhe métricas e otimize sua produtividade com insights em tempo real
-                  </p>
-                </CardContent>
-              </Card>
-
-              {/* Atualizações Contínuas */}
-              <Card className="border-2 rounded-xl hover:shadow-lg transition-all duration-300">
-                <CardContent className="pt-6">
-                  <div className="w-14 h-14 rounded-lg bg-orange-50 flex items-center justify-center mb-4">
-                    <Zap className="w-7 h-7 text-siplan-urucum" />
-                  </div>
-                  <h3 className="text-xl font-inter font-extrabold text-siplan-bordo mb-2">
-                    Atualizações Contínuas
-                  </h3>
-                  <p className="text-sm text-siplan-cinza leading-[1.6]">
-                    Base de conhecimento atualizada com novas leis e provimentos automaticamente
-                  </p>
                 </CardContent>
               </Card>
             </div>
@@ -543,7 +471,7 @@ const Landing = () => {
                     </li>
                     <li className="flex items-center gap-2">
                       <Check className="w-5 h-5 text-success" />
-                      <span className="leading-[1.6]">10 conversas com chatbot/mês</span>
+                      <span className="leading-[1.6]">Acesso ao analisador de documentos</span>
                     </li>
                     <li className="flex items-center gap-2">
                       <Check className="w-5 h-5 text-success" />
@@ -585,7 +513,7 @@ const Landing = () => {
                     </li>
                     <li className="flex items-center gap-2">
                       <Check className="w-5 h-5 text-success" />
-                      <span className="font-medium leading-[1.6]">Chatbot jurídico ilimitado</span>
+                      <span className="font-medium leading-[1.6]">Acesso aos NEXUS personalizados</span>
                     </li>
                     <li className="flex items-center gap-2">
                       <Check className="w-5 h-5 text-success" />
@@ -622,7 +550,7 @@ const Landing = () => {
                     </li>
                     <li className="flex items-center gap-2">
                       <Check className="w-5 h-5 text-success" />
-                      <span className="font-medium leading-[1.6]">Conversas ilimitadas</span>
+                      <span className="font-medium leading-[1.6]">NEXUS ilimitados e personalizados</span>
                     </li>
                     <li className="flex items-center gap-2">
                       <Check className="w-5 h-5 text-success" />

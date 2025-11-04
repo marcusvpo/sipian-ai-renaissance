@@ -7,7 +7,6 @@ import { supabase } from "@/integrations/supabase/client";
 import { useToast } from "@/components/ui/use-toast";
 import { 
   Sparkles, 
-  MessageSquare, 
   FileSearch, 
   Wand2, 
   BarChart3,
@@ -121,7 +120,7 @@ const Dashboard = () => {
         </div>
 
         {/* Stats Cards */}
-        <div className="grid grid-cols-1 md:grid-cols-4 gap-6 mb-8">
+        <div className="grid grid-cols-1 md:grid-cols-3 gap-6 mb-8">
           <Card>
             <CardHeader className="flex flex-row items-center justify-between pb-2">
               <CardTitle className="text-sm font-medium text-muted-foreground">
@@ -137,20 +136,6 @@ const Dashboard = () => {
             </CardContent>
           </Card>
 
-          <Card>
-            <CardHeader className="flex flex-row items-center justify-between pb-2">
-              <CardTitle className="text-sm font-medium text-muted-foreground">
-                Chats Disponíveis
-              </CardTitle>
-              <MessageSquare className="w-4 h-4 text-muted-foreground" />
-            </CardHeader>
-            <CardContent>
-              <div className="text-2xl font-bold">10/10</div>
-              <p className="text-xs text-muted-foreground mt-1">
-                Plano Free
-              </p>
-            </CardContent>
-          </Card>
 
           <Card>
             <CardHeader className="flex flex-row items-center justify-between pb-2">
@@ -184,23 +169,7 @@ const Dashboard = () => {
         </div>
 
         {/* Quick Actions */}
-        <div className="grid md:grid-cols-3 gap-6">
-          <Link to="/chat">
-            <Card className="hover:shadow-lg transition-all cursor-pointer group">
-              <CardHeader>
-                <div className="w-12 h-12 rounded-lg bg-primary/10 flex items-center justify-center mb-4 group-hover:scale-110 transition-transform">
-                  <MessageSquare className="w-6 h-6 text-primary" />
-                </div>
-                <CardTitle className="flex items-center justify-between">
-                  Chatbot Especialista
-                  <ChevronRight className="w-5 h-5 text-muted-foreground group-hover:translate-x-1 transition-transform" />
-                </CardTitle>
-                <CardDescription>
-                  Converse com nossa IA treinada em legislação cartorial brasileira
-                </CardDescription>
-              </CardHeader>
-            </Card>
-          </Link>
+        <div className="grid md:grid-cols-2 gap-6">
 
           <Link to="/analyzer">
             <Card className="hover:shadow-lg transition-all cursor-pointer group">

@@ -105,11 +105,6 @@ const Landing = () => {
             <a href="#beta" className="text-sm font-medium text-muted-foreground hover:text-siplan-carmesim transition-colors">
               Beta
             </a>
-            <a href="#recursos">
-              <Button variant="outline" size="sm" className="font-inter font-medium border-siplan-carmesim text-siplan-carmesim hover:bg-siplan-carmesim hover:text-white transition-all">
-                Ver Demo
-              </Button>
-            </a>
             <Link to="/auth">
             <Button variant="ghost" size="sm" className="font-inter font-medium">
               Entrar
